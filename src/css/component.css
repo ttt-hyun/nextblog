@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* ==================================================
+    header
+================================================== */
+#total-wrapper header{width:100%; position:fixed; padding-top:20px; top:0; left:0; z-index:100;}
+header .header-contents{position:relative; z-index:5;}
+header .header-contents .title-box{height:60px; width:100%; max-width:480px; background-color:var(--bg-float-canvas);}
+
+.menu-button{padding:15px 12px; position:absolute; top:50%; right:0; transform:translateY(-50%); z-index:5;}
+.menu-button .menu-box{height:100%; width:100%;}
+.menu-button .menu-box .menu-path{width:100%; height:3px; border-radius:1.5px; background-color:var(--util-color);}
+.menu-button .menu-box .menu-path:nth-child(2){width:80%;}
+
+/* ==================================================
+    main
+================================================== */
+main .main-inner{padding:210px 0;}
+
+/* ==================================================
+    cpt-sidebar
+================================================== */
+.cpt-sidebar{width:360px; flex-basis:360px;}
+
+.referer-list{margin-left:-10px;}
+.referer-list > ul > li{position:relative; z-index:5;}
+.referer-list > ul > li:first-child:before{display:none;}
+.referer-list > ul > li:before{display:block; content:''; clear:both; border-top:3px solid var(--reverse-default-color); border-right:3px solid var(--reverse-default-color); border-left:3px solid transparent; border-bottom:3px solid transparent; position:absolute; top:50%; margin-top:-2px; left:-5px; z-index:5; transform:rotateZ(45deg);}
+.referer-list > ul > li > a{display:block; padding:0 10px; box-sizing:border-box;}
+
+.cpt-sidebar .sidebar-menu > ul > li > a{height:50px; padding:0 20px; box-sizing:border-box;}
+.cpt-sidebar .sidebar-util{margin-top:10px;}
+.cpt-sidebar .sidebar-articles{margin-top:70px;}
+.cpt-sidebar .sidebar-articles .articles-list{margin-top:15px;}
+.cpt-sidebar .sidebar-articles .articles-list > ul{padding-left:12px; box-sizing:border-box;}
+
+/* ==================================================
+    page-post
+================================================== */
+.page-post{flex-grow:1;}
+
+.page-post .post-thumb{height:300px; background-size:cover; background-repeat:no-repeat; background-position:center; background-color:#c1c1c1;}
+.page-post .post-contents .title h3{font-size:4rem; font-weight:800; padding:20px 0; border-bottom:1px solid var(--reverse-default-color)}
+.page-post .post-contents .contents{padding:40px 0;}
+
+/* ==================================================
+    layout-text
+================================================== */
+.layout-text{height:44px;}
+
+.date-text{padding-left:20px; background-image:url('../../public/ico_time_gry.svg'); background-position:left center; background-repeat:no-repeat; background-size:14px; color:var(--util-color);}
+
+/* ==================================================
+    basic grid option
+================================================== */
+.container{padding:200px 0;}
+.max-grid{width:100%; max-width:1360px; padding:0 40px; box-sizing:border-box;}
+
+/* ==================================================
+    prim options
+================================================== */
+.prim-shadow{box-shadow:rgba(0, 0, 0, 0.06) 0px 1.3px 13px 3.25px;}
+
+/* ==================================================
+    btn
+================================================== */
+.prim-btn{display:flex; width:40px; height:40px; border-radius:6.5px; background:var(--bg-float-canvas); box-sizing:border-box;}
+.prim-btn:hover{background:var(--bg-float-canvas-slct);}
+.prim-btn.sz5{width:50px; height:50px;}
+.theme-btn{position:relative;}
+.theme-btn > svg{width:42%; position:relative; z-index:5;}
+.theme-btn > svg .bulb-head{fill:var(--bg-bright-color);}
+[data-theme="dark"] .theme-btn > .bright-effect{background:#fff; width:10px; height:10px; border-radius:5px; box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); margin-top:-4px;}
+
+/* ==================================================
+    util bar
+================================================== */
+.utilbar{height:185px; width:50px; border-radius:6.5px; margin-top:-25px; background:var(--bg-float-canvas); position:fixed; top:50%; left:20px; z-index:10;}
+
+/* ==================================================
+    Bento box
+================================================== */
+.bento-box{box-sizing:border-box; border-radius:8.5px; position:relative; z-index:5;} 
+.bento-pd{padding:16px 30px;}
+.prim-border-left{background-color:var(--bg-float-canvas);}
+
