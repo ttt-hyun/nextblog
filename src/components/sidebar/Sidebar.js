@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { Image } from 'next/image';
 import {chat_image} from '../../../public/ico_chat_gry.svg';
-function Sidebar({handleChange, isChecked}){
+function Sidebar(){
     return (
         <div className="cpt-sidebar flex-shrink">
             <div className="layout-text flex-box align-items-center">
