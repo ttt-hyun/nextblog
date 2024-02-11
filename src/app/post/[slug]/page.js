@@ -1,6 +1,8 @@
-const page = () => {
+const singlePostPage = ({params}) => {
+    console.log(params)
     return (
         <div class="page-post">
+            
             <div className="layout-text flex-box justify-content-end align-items-center">
                 <p className="date-text fs12 fw800">2024.01.13</p>
             </div>
@@ -21,4 +23,4 @@ const page = () => {
     )
 }
 
-export default page
+export default singlePostPage

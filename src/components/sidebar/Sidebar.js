@@ -1,8 +1,7 @@
 //import Bulbsvg from './bulbsvg';
 import Link from 'next/link';
-import { Image } from 'next/image';
-import {chat_image} from '../../../public/ico_chat_gry.svg';
-function Sidebar(){
+import Image from 'next/image';
+const Sidebar = () => {
     return (
         <div className="cpt-sidebar flex-shrink">
             <div className="layout-text flex-box align-items-center">
@@ -49,29 +48,17 @@ function Sidebar(){
                     </li> */}
                     <li>
                         <button className="prim-btn prim-shadow flex-center">
-                            <img 
-                                src={`ico_share_gry.svg`} 
-                                alt='공유하기'
-                                width='20'
-                            />
+                            <Image src="/ico_share_gry.svg" alt="" width={20} height={22} />
                         </button>
                     </li>
                     <li>
                         <button className="prim-btn prim-shadow flex-center">
-                            <img 
-                                src={'ico_chat_gry.svg'} 
-                                alt='공유하기'
-                                width='20'
-                            />
+                            <Image src="/ico_chat_gry.svg" alt="" width={20} height={20} />
                         </button>
                     </li>
                     <li>
                         <button className="prim-btn prim-shadow flex-center">
-                            <img 
-                                src={`ico_like_gry.svg`} 
-                                alt='공유하기'
-                                width='20'
-                            />
+                            <Image src="/ico_like_gry.svg" alt="" width={20} height={18} />
                         </button>
                     </li>
                 </ul>
@@ -100,4 +87,4 @@ function Sidebar(){
         </div>
     )
 }
-export {Sidebar}
+export default Sidebar
