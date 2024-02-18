@@ -1,3 +1,4 @@
+import PostCard from "@/components/postCard/postCard";
 import supabase from "@/utils/supabase";
 
 const PostPage = async () => {
@@ -6,6 +7,12 @@ const PostPage = async () => {
     return (
         <div className="page-post">
             {JSON.stringify(data, null, 2)}
+            <PostCard />
+
+
+             
+             
+
         </div>
     )
 }
