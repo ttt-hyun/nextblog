@@ -1,4 +1,16 @@
-const singlePostPage = ({params}) => {
+import { allDocs } from "contentlayer/generated"
+import { notFound } from "next/navigation";
+
+async function getDocFromParams(slug){
+    const doc = allDocs.find((doc) => doc.slugAsParams === slug);
+
+    if(!doc) notFound()
+
+    return doc
+}
+
+const singlePostPage = async ({params}) => {
+    const doc = await getDocFromParams(params.slug);
     console.log(params)
     return (
         <div class="page-post">
@@ -14,6 +26,7 @@ const singlePostPage = ({params}) => {
                     <h3>React를 시작하며</h3>
                 </div>
                 <div class="contents">
+                    {JSON.stringify(doc)}
                     {/* <ReactMarkdown className="markdown-body" rehypePlugins={[rehypeHighlight]} >
                         {markdown}
                     </ReactMarkdown> */}
