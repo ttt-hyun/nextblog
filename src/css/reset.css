@@ -1,12 +1,26 @@
 @charset "utf-8";
 /* CSS Document */
 @import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
-@import url('https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css');
+
+@font-face {
+   font-family: 'SUIT';
+   src: url('../fonts/SUIT-Variable.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Pretendard';
+   src: url('../fonts/PretendardVariable.ttf') format('truetype');
+}
+
+.prtdd{font-family: 'Pretendard';}
+
+
 * {
 	text-size-adjust:none;
 	-webkit-text-size-adjust:none;
 	-moz-text-size-adjust:none;
 	-o-text-size-adjust:none;
+   box-sizing:border-box;
 }
 
 html, body{
@@ -25,7 +39,6 @@ body,th,td,input,select,textarea,button {
       color:#111111;
      word-break:keep-all; word-wrap:break-word;
      letter-spacing: -0.5px;
-
 }
 
 ::-webkit-input-placeholder {

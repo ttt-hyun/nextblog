@@ -1,5 +1,7 @@
 import { allDocs } from "contentlayer/generated"
 import { notFound } from "next/navigation";
+import { Mdx } from "@/components/mdx/Mdx";
+import "highlight.js/styles/night-owl.css";
 
 async function getDocFromParams(slug){
     const doc = allDocs.find((doc) => doc.slugAsParams === slug);
@@ -9,30 +11,32 @@ async function getDocFromParams(slug){
     return doc
 }
 
-const singlePostPage = async ({params}) => {
+const singlePostPage = async ({params, props}) => {
     const doc = await getDocFromParams(params.slug);
-    console.log(params)
     return (
-        <div class="page-post">
-            
+        <>
+        <div className="page-post">
             <div className="layout-text flex-box justify-content-end align-items-center">
-                <p className="date-text fs12 fw800">2024.01.13</p>
+                <p className="date-text fs12 fw800">{doc.date}</p>
             </div>
+
+
             <div className="post-thumb rd10">
                 
             </div>
             <div className="post-contents">
                 <div className="title">
-                    <h3>React를 시작하며</h3>
+                    <h3>{doc.title}</h3>
                 </div>
-                <div class="contents">
-                    {JSON.stringify(doc)}
-                    {/* <ReactMarkdown className="markdown-body" rehypePlugins={[rehypeHighlight]} >
-                        {markdown}
-                    </ReactMarkdown> */}
+                <div className="contents markdown-body">
+                    <Mdx code={doc.body.code} />
                 </div>
             </div>
         </div>
+        <div className="post-heading">
+
+        </div>
+        </>
     )
 }
 

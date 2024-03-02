@@ -22,17 +22,17 @@ const Sidebar = () => {
             <div className='sidebar-menu'>
                 <ul className='flex-box flex-column gap-10'>
                     <li>
-                        <Link href="/blog/post" className='flex-box align-items-center prim-bg hov rd10'>
+                        <Link href="/post" className='flex-box align-items-center prim-bg hov rd10'>
                             <span className='fs16 fw900 default-clr'>Post</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/blog/lab" className='flex-box align-items-center prim-bg hov rd10'>
+                        <Link href="/lab" className='flex-box align-items-center prim-bg hov rd10'>
                             <span className='fs16 fw900 default-clr'>Play lab</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/blog/post" className='flex-box align-items-center prim-bg hov rd10'>
+                        <Link href="/components" className='flex-box align-items-center prim-bg hov rd10'>
                             <span className='fs16 fw900 default-clr'>Component's</span>
                         </Link>
                     </li>

@@ -44,6 +44,24 @@
 .prim-bg.hov:hover{background-color:var(--hover-prim-color);}
 
 /* ==================================================
+                       grid
+================================================== */
+.grid-box{display:grid;}
+
+.g-gap-10{grid-gap: 10px;}
+.g-gap-20{grid-gap: 20px;}
+.g-gap-30{grid-gap: 30px;}
+.g-gap-40{grid-gap: 40px;}
+
+
+.g-col-2{grid-template-columns: repeat(2, 1fr);}
+.g-col-3{grid-template-columns: repeat(3, 1fr);}
+.g-col-4{grid-template-columns: repeat(4, 1fr);}
+
+
+
+
+/* ==================================================
                        Flex
 ================================================== */
 
@@ -107,6 +125,8 @@
 .gap-90 { gap: 90px; }
 .gap-100 { gap: 100px; }
 
+.grow-1{flex-grow:1;}
+
 
 /* ==================================================
                       margin
@@ -150,6 +170,8 @@
 .rw-1 {-webkit-line-clamp:1;}
 .rw-2 {-webkit-line-clamp:2;}
 .rw-3 {-webkit-line-clamp:3;}
+.rw-4 {-webkit-line-clamp:4;}
+.rw-5 {-webkit-line-clamp:5;}
 
 .txt-l{text-align:left !important;}
 .txt-c{text-align:center !important;}

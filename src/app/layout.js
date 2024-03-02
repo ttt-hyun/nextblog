@@ -1,6 +1,7 @@
 import "@/css/component.css";
 import "@/css/reset.css";
 import "@/css/utility.css";
+import "@/css/markdown.css"
 import Header from "@/components/header/Header"
 import Sidebar from "@/components/sidebar/Sidebar";
 
@@ -12,12 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>
+      <body data-theme="light">
         <div id="total-wrapper">
           <Header />
           <main>
             <div className="main-inner">
-              <div className="flex-box gap-10 max-grid ml-auto mr-auto">  
+              <div className="flex-box gap-20 max-grid ml-auto mr-auto">  
                 <Sidebar/>
                 {children}
               </div>
