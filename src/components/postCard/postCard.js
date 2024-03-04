@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import styles from './postCard.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,6 +6,8 @@ import Link from 'next/link';
 const PostCard = (props) => {
     const data = props.total;
     const dataUrl = data._id.replace(/\.mdx$/, '');
+    const d = new Date(data.date);
+    const date = format(new Date(d.getFullYear(), d.getMonth(), d.getDate()), 'yyyy.MM.dd');
     console.log(dataUrl)    
     return (
         <>
@@ -19,7 +22,7 @@ const PostCard = (props) => {
                     </div>
                     <p className={`${styles.datetime}`}>
                         <Image src="/ico_time_gry.svg" alt="" width={14} height={14} />
-                        <span>{props.datetime}</span>
+                        <span>{date}</span>
                     </p>
 
                 </div>

@@ -78,6 +78,7 @@
 .align-items-start { -webkit-box-align: start;  -moz-align-items: flex-start;  -ms-flex-align: start;  align-items: flex-start; }
 .align-items-end { -webkit-box-align: end; -moz-align-items: flex-end;  -ms-flex-align: end;  align-items: flex-end; }
 .align-items-baseline { -webkit-box-align: baseline;  -moz-align-items: baseline;  -ms-flex-align: baseline; align-items: baseline; }
+.align-items-stretch { align-items:stretch; }
 
 .flex-column { -webkit-box-orient: vertical;  -moz-flex-direction: column;  -ms-flex-direction: column;  flex-direction: column;}
 .flex-row { -webkit-box-orient: horizontal;  -moz-flex-direction: row;  -ms-flex-direction: row;  flex-direction: row;} 
