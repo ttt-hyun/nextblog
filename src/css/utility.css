@@ -14,6 +14,8 @@
     --prim-color:#FFD74A;
     --hover-prim-color:#f8cf3d;
     --util-color:#666666;
+    --soft-text:#666666;
+    --hover-soft-text:#1a1a1a;
 }
 [data-theme="dark"]{
 

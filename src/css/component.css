@@ -49,7 +49,15 @@ main .main-inner{padding:210px 0;}
 /* ==================================================
     post-headings
 ================================================== */
-.post-heading{width:280px; flex-shrink:0;}
+.post-heading{width:280px; flex-shrink:0; position:relative;}
+.post-heading .sticky-item{position:sticky; top:80px; left:0; z-index:5;}
+.post-heading .heading-list .depth1 > li > a{font-size:1.6rem; font-weight:800; color:var(--soft-text)}
+.post-heading .heading-list .depth1 > li > a:hover{color:var(--reverse-default-color)}
+.post-heading .heading-list .depth2{padding-top:3px;}
+.post-heading .heading-list .depth2 > li{padding-left:1.5rem;}
+.post-heading .heading-list .depth2 > li > a{font-size:1.4rem; color:var(--soft-text);}
+.post-heading .heading-list .depth2 > li > a:hover{color:var(--reverse-default-color);}
+
 
 /* ==================================================
     layout-text
