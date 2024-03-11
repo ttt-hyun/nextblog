@@ -1,7 +1,8 @@
 import "@/css/component.css";
 import "@/css/reset.css";
 import "@/css/utility.css";
-import "@/css/markdown.css"
+
+// import "@/css/markdown.css"
 import Header from "@/components/header/Header"
 import Sidebar from "@/components/sidebar/Sidebar";
 

@@ -16,6 +16,7 @@ export type Doc = {
   title: string
   description: string
   date: IsoDateTimeString
+  category: string
   published: boolean
   /** MDX file body */
   body: MDX

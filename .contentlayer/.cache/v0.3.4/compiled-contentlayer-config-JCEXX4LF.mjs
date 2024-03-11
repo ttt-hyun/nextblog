@@ -2,6 +2,7 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
+import rehypePrism from "rehype-prism-plus";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
@@ -45,8 +46,37 @@ var contentlayer_config_default = makeSource({
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
+      () => (tree) => {
+        visit(tree, (node) => {
+          if (node?.type === "element" && node?.tagName === "pre") {
+            const [codeEl] = node.children;
+            if (codeEl.tagName !== "code")
+              return;
+            node.raw = codeEl.children?.[0].value;
+          }
+        });
+      },
       rehypeSlug,
-      rehypeHighlight,
+      [
+        rehypePrettyCode,
+        {
+          theme: "one-dark-pro"
+        }
+      ],
+      () => (tree) => {
+        visit(tree, (node) => {
+          if (node?.type === "element" && node?.tagName === "figure") {
+            if (!("data-rehype-pretty-code-fragment" in node.properties)) {
+              return;
+            }
+            for (const child of node.children) {
+              if (child.tagName === "pre") {
+                child.properties["raw"] = node.raw;
+              }
+            }
+          }
+        });
+      },
       [
         rehypeAutolinkHeadings,
         {
@@ -63,4 +93,4 @@ export {
   Doc,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-YOQGMPXA.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-JCEXX4LF.mjs.map

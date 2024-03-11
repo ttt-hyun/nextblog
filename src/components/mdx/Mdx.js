@@ -1,5 +1,9 @@
 import * as React from 'react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
+import { Pre } from '@/components/pre/Pre'
+import "@/css/mdx.css";
+import Image from 'next/image'
+import { MdxH1, MdxH2, MdxH3, MdxH4, MdxH5, MdxH6, } from '@/components/mdx/Headings';
 
 // const components = {
 //     h1: ({ className, ...props }) => (
@@ -145,15 +149,26 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 //     Image,
 //     Callout,
 //     Card: MdxCard,
-//   }
+// }
 
+const components = {
+   
+    pre: Pre,
+    img: (props) => (
+        <Image
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+          {...props}
+        />
+      ),
+};
 
 export function Mdx({ code }) {
     const Component = useMDXComponent(code);
     
     return (
         <div>
-            <Component />
+            <Component  components={components} />
         </div>
     )
 }
