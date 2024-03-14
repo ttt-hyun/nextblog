@@ -12,7 +12,9 @@ const PostPage = async () => {
             <div className="grid-box g-col-3 g-gap-10 grow-1">
                 {/* {JSON.stringify(data, null, 2)} */}
                 {posts.map(post => (
+
                     <PostCard total={post} title={post.title} description={post.description} datetime={post.date}/>
+                    
                 ))}
             </div>
         </article>
