@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next export && touch out/.nojekyll && git add -f out/ && git commit -m \"Deploy\" && git subtree split --prefix out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
