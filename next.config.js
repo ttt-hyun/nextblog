@@ -3,7 +3,6 @@ const { createContentlayerPlugin } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   reactStrictMode: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
