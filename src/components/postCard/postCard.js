@@ -12,7 +12,7 @@ const PostCard = (props) => {
     const date = format(new Date(d.getFullYear(), d.getMonth(), d.getDate()), 'yyyy.MM.dd');
     return (
         <>
-            <Link href={dataUrl} className={`${styles.container} prim-shadow`}>
+            <Link href={`/${dataUrl}`} className={`${styles.container} prim-shadow`}>
                 <div className={styles.imagebox}></div>
                 <div className={styles.textbox}>
                     <div className={`${styles.head}`}>
