@@ -24,7 +24,7 @@ const singlePostPage = async ({ params: { slug } }) => {
     console.log('slug is=============');
     console.log(slug);
     console.log('==============================================');
-    const doc = allDocs.find((post) => post.slugAsParams === slug);
+    const doc = allDocs.find((post) => post === slug);
 
     if (!doc) notFound();
 
