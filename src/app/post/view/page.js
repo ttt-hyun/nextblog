@@ -6,7 +6,7 @@ import { format } from "date-fns";
 import Image from "next/image";
 import Headings from "@/components/mdx/Headings";
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 async function getDocFromParams(slug){
     const doc = allDocs.find((doc) => doc.slugAsParams === slug);
