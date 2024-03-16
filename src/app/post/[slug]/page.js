@@ -17,11 +17,18 @@ import { allDocs } from '@/../.contentlayer/generated';
 // }
 
 export const generateStaticParams = async () =>
-    allDocs.map((post) => ({ slug: post._raw.slugAsParams }));
+console.log('allDocs before ==================================');
+    console.log(allDocs);
+    console.log('==============================================');
+    allDocs.map((post) => ({ slug: post._raw.flattenedPath }));
+    console.log('allDocs after ==================================');
+    console.log(allDocs);
+    console.log('==============================================');
 
 const singlePostPage = async ({ params: { slug } }) => {
     console.log('slug is=============');
     console.log(slug);
+    console.log('==============================================');
     // const doc = allDocs.find((post) => post._raw.flattenedPath === slug);
 
     // if (!doc) notFound();
