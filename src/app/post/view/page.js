@@ -17,6 +17,9 @@ async function getDocFromParams(slug){
 
 
 const singlePostPage = async (props) => {
+    console.log('singlePostPage console ===========================');
+    console.log(props);
+    console.log('singlePostPage console ===========================');
     const doc = await getDocFromParams(props.searchParams.id);
     const d = new Date(doc.date);
     const date = format(new Date(d.getFullYear(), d.getMonth(), d.getDate()), 'yyyy.MM.dd');
