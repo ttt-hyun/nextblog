@@ -13,7 +13,7 @@ const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
     loader: 'akamai',
-    path: '/dev',
+    path: 'https://ttt-hyun.github.io/dev',
 
     remotePatterns:[
       {
