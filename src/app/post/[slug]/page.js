@@ -24,15 +24,12 @@ const singlePostPage = async ({ params: { slug } }) => {
     console.log('slug is=============');
     console.log(slug);
     console.log('==============================================');
-    const doc = allDocs.find((post) => post._raw.flattenedPath === slug);
+    const doc = allDocs.find((post) => post.slugAsParams === slug);
 
     if (!doc) notFound();
 
     return (
         <>
-        <div className="page-post">
-            <p>{slug}</p>
-        </div>
         <div className="page-post">
             <div className="layout-text flex-box justify-content-end align-items-center">
                 <p className="date-text fs12 fw800">{date}</p>
