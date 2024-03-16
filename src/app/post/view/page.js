@@ -27,7 +27,7 @@ const singlePostPage = async (props) => {
 
     return (
         <>
-        <div className="page-post">{props}</div>
+        <div className="page-post">{props.searchParams.id}</div>
         {/* <div className="page-post">
             <div className="layout-text flex-box justify-content-end align-items-center">
                 <p className="date-text fs12 fw800">{date}</p>
