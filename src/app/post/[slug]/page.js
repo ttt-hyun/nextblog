@@ -23,6 +23,9 @@ export const generateStaticParams = async () =>
 const singlePostPage = async ({ params: { slug } }) => {
     const doc = allDocs.find((doc) => doc.slugAsParams === slug);
 
+    const d = new Date(doc.date);
+    const date = format(new Date(d.getFullYear(), d.getMonth(), d.getDate()), 'yyyy.MM.dd');
+
     if (!doc) notFound();
 
     return (

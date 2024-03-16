@@ -10,7 +10,6 @@ const PostCard = (props) => {
     // const dataUrlToView = dataUrl.replace("post/", "post/view?id=");
     const d = new Date(data.date);
     const date = format(new Date(d.getFullYear(), d.getMonth(), d.getDate()), 'yyyy.MM.dd');
-    console.log(dataUrl)    
     return (
         <>
             <Link href={dataUrl} className={`${styles.container} prim-shadow`}>
