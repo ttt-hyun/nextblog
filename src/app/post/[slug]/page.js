@@ -17,7 +17,7 @@ import { allDocs } from '@/../.contentlayer/generated';
 // }
 
 export const generateStaticParams = async () =>
-    allDocs.map((post) => ({ slug: post._raw.flattenedPath }));
+    allDocs.map((post) => ({ slug: post._raw.slugAsParams }));
 
 const singlePostPage = async ({ params: { slug } }) => {
     console.log('slug is=============');
