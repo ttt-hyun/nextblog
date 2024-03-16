@@ -20,7 +20,7 @@ export const generateStaticParams = async () =>
 console.log('allDocs before ==================================');
     console.log(allDocs);
     console.log('==============================================');
-    allDocs.map((post) => ({ slug: post._raw.flattenedPath }));
+    allDocs.map((post) => ({ slug: post.slugAsParams }));
     console.log('allDocs after ==================================');
     console.log(allDocs);
     console.log('==============================================');
