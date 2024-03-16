@@ -6,7 +6,7 @@ import Image from "next/image";
 import Headings from "@/components/mdx/Headings";
 import { allDocs } from '@/../.contentlayer/generated';
 
-// export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 
 // async function getDocFromParams(slug){
 //     const doc = allDocs.find((doc) => doc.slugAsParams === slug);
