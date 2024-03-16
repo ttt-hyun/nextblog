@@ -7,6 +7,7 @@ import Image from "next/image";
 import Headings from "@/components/mdx/Headings";
 
 export const dynamic = 'force-static';
+
 async function getDocFromParams(slug){
     const doc = allDocs.find((doc) => doc.slugAsParams === slug);
 
@@ -20,13 +21,14 @@ const singlePostPage = async (props) => {
     console.log('singlePostPage console ===========================');
     console.log(props);
     console.log('singlePostPage console ===========================');
-    const doc = await getDocFromParams(props.searchParams.id);
-    const d = new Date(doc.date);
-    const date = format(new Date(d.getFullYear(), d.getMonth(), d.getDate()), 'yyyy.MM.dd');
+    // const doc = await getDocFromParams(props.searchParams.id);
+    // const d = new Date(doc.date);
+    // const date = format(new Date(d.getFullYear(), d.getMonth(), d.getDate()), 'yyyy.MM.dd');
 
     return (
         <>
-        <div className="page-post">
+        <div className="page-post">{props}</div>
+        {/* <div className="page-post">
             <div className="layout-text flex-box justify-content-end align-items-center">
                 <p className="date-text fs12 fw800">{date}</p>
             </div>
@@ -44,7 +46,7 @@ const singlePostPage = async (props) => {
         </div>
         <div className="post-heading">
             <Headings code={doc.body.code} />
-        </div>
+        </div> */}
         </>
     )
 }
