@@ -1,4 +1,3 @@
-import { allDocs } from "contentlayer/generated"
 import { notFound } from "next/navigation";
 import { Mdx } from "@/components/mdx/Mdx";
 // import "highlight.js/styles/night-owl.css";
