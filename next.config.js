@@ -8,7 +8,7 @@ const isProd = process.env.NODE_ENV === 'production'
 const nextConfig = {
   output: 'export',
   assetPrefix: isProd ? 'https://ttt-hyun.github.io/dev' : undefined,
-  basePath: isProd ? 'dev' : undefined,
+  basePath: isProd ? '/dev' : undefined,
   reactStrictMode: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
