@@ -8,10 +8,12 @@ const isProd = process.env.NODE_ENV === 'production'
 const nextConfig = {
   output: 'export',
   assetPrefix: isProd ? 'https://ttt-hyun.github.io/dev' : undefined,
-  basePath: isProd ? '/dev' : undefined,
   reactStrictMode: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
+    loader: 'imgix',
+    path: isProd ? 'https://ttt-hyun.github.io/dev' : undefined,
+
     remotePatterns:[
       {
         protocol: 'https',
@@ -19,6 +21,7 @@ const nextConfig = {
       }
     ]
   },
+  
 };
 
 const withContentlayer = createContentlayerPlugin({
