@@ -97,17 +97,17 @@ const Sidebar = () => {
                         </li> */}
                         <li>
                             <button className="prim-btn prim-shadow flex-center">
-                                <Image src="/ico_share_gry.svg" alt="" width={20} height={22} />
+                                <Image src="/dev/ico_share_gry.svg" alt="" width={20} height={22} />
                             </button>
                         </li>
                         <li>
                             <button className="prim-btn prim-shadow flex-center">
-                                <Image src="/ico_chat_gry.svg" alt="" width={20} height={20} />
+                                <Image src="/dev/ico_chat_gry.svg" alt="" width={20} height={20} />
                             </button>
                         </li>
                         <li>
                             <button className="prim-btn prim-shadow flex-center">
-                                <Image src="/ico_like_gry.svg" alt="" width={20} height={18} />
+                                <Image src="/dev/ico_like_gry.svg" alt="" width={20} height={18} />
                             </button>
                         </li>
                     </ul>

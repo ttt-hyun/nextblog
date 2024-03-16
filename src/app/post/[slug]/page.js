@@ -35,7 +35,7 @@ const singlePostPage = async ({ params: { slug } }) => {
                 <p className="date-text fs12 fw800">{date}</p>
             </div>
             <div className="post-thumb rd10">
-                <Image src="/thumb_next_1.svg" alt="" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} />
+                <Image src="/dev/thumb_next_1.svg" alt="" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} />
             </div>
             <div className="post-contents">
                 <div className="title">

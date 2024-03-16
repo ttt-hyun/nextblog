@@ -22,7 +22,6 @@ const nextConfig = {
       }
     ]
   },
-  
 };
 
 const withContentlayer = createContentlayerPlugin({

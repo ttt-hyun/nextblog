@@ -22,7 +22,7 @@ const PostCard = (props) => {
                         <p className={`${styles.description} t-rw rw-3`}>{props.description}</p>
                     </div>
                     <p className={`${styles.datetime}`}>
-                        <Image src="/ico_time_gry.svg" alt="" width={14} height={14} />
+                        <Image src="/dev/ico_time_gry.svg" alt="" width={14} height={14} />
                         <span>{date}</span>
                     </p>
 
