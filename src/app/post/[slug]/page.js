@@ -20,6 +20,7 @@ export const generateStaticParams = async () =>
     allDocs.map((post) => ({ slug: post._raw.flattenedPath }));
 
 const singlePostPage = async ({ params: { slug } }) => {
+    console.log('slug is=============');
     console.log(slug);
     // const doc = allDocs.find((post) => post._raw.flattenedPath === slug);
 
