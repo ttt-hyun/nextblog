@@ -13,7 +13,7 @@ const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
     loader: 'imgix',
-    path: isProd ? 'https://ttt-hyun.github.io/dev' : undefined,
+    path: '/dev',
 
     remotePatterns:[
       {
