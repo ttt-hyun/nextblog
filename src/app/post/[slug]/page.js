@@ -20,13 +20,17 @@ export const generateStaticParams = async () =>
     allDocs.map((post) => ({ slug: post._raw.flattenedPath }));
 
 const singlePostPage = async ({ params: { slug } }) => {
-    const doc = allDocs.find((post) => post._raw.flattenedPath === slug);
+    console.log(slug);
+    // const doc = allDocs.find((post) => post._raw.flattenedPath === slug);
 
-    if (!doc) notFound();
+    // if (!doc) notFound();
 
     return (
         <>
         <div className="page-post">
+            <p>{slug}</p>
+        </div>
+        {/* <div className="page-post">
             <div className="layout-text flex-box justify-content-end align-items-center">
                 <p className="date-text fs12 fw800">{date}</p>
             </div>
@@ -44,7 +48,7 @@ const singlePostPage = async ({ params: { slug } }) => {
         </div>
         <div className="post-heading">
             <Headings code={doc.body.code} />
-        </div>
+        </div> */}
         </>
     )
 }
