@@ -7,13 +7,13 @@ const PostCard = (props) => {
     const data = props.total;
     console.log(data._id);
     const dataUrl = data._id.replace(/\.mdx$/, '');
-    const dataUrlToView = dataUrl.replace("post/", "post/view?id=");
+    // const dataUrlToView = dataUrl.replace("post/", "post/view?id=");
     const d = new Date(data.date);
     const date = format(new Date(d.getFullYear(), d.getMonth(), d.getDate()), 'yyyy.MM.dd');
     console.log(dataUrl)    
     return (
         <>
-            <Link href={dataUrlToView} className={`${styles.container} prim-shadow`}>
+            <Link href={dataUrl} className={`${styles.container} prim-shadow`}>
                 <div className={styles.imagebox}></div>
                 <div className={styles.textbox}>
                     <div className={`${styles.head}`}>
