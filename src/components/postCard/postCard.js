@@ -16,7 +16,7 @@ const PostCard = (props) => {
                 <div className={styles.imagebox}></div>
                 <div className={styles.textbox}>
                     <div className={`${styles.head}`}>
-                        <h3 className={`${styles.title}`}>{props.title}</h3>
+                        <h3 className={`${styles.title} t-rw rw-1`}>{props.title}</h3>
                     </div>
                     <div className={`${styles.body}`}>
                         <p className={`${styles.description} t-rw rw-3`}>{props.description}</p>
