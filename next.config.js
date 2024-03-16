@@ -12,7 +12,7 @@ const nextConfig = {
   reactStrictMode: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
-    loader: 'imgix',
+    loader: 'akamai',
     path: '/dev',
 
     remotePatterns:[
