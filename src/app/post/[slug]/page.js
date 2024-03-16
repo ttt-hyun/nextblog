@@ -21,9 +21,6 @@ export const generateStaticParams = async () =>
 
 
 const singlePostPage = async ({ params: { slug } }) => {
-    console.log('slug is=======================================');
-    console.log(slug);
-    console.log('==============================================');
     const doc = allDocs.find((doc) => doc.slugAsParams === slug);
 
     console.log('doc is========================================');
