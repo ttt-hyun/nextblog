@@ -18,9 +18,9 @@ header .header-contents .title-box{height:60px; width:100%; max-width:480px; bac
 main .main-inner{padding:210px 0;}
 
 /* ==================================================
-    cpt-sidebar
+    sidebar
 ================================================== */
-.cpt-sidebar{width:360px; flex-basis:300px;}
+.sidebar{width:360px; flex-basis:300px;}
 
 .referer-list{margin-left:-10px;}
 .referer-list > ul > li{position:relative; z-index:5;}
@@ -28,20 +28,38 @@ main .main-inner{padding:210px 0;}
 .referer-list > ul > li:before{display:block; content:''; clear:both; border-top:3px solid var(--reverse-default-color); border-right:3px solid var(--reverse-default-color); border-left:3px solid transparent; border-bottom:3px solid transparent; position:absolute; top:50%; margin-top:-2px; left:-5px; z-index:5; transform:rotateZ(45deg);}
 .referer-list > ul > li > a{display:block; padding:0 10px; box-sizing:border-box;}
 
-.cpt-sidebar{position:relative;}
-.cpt-sidebar .sticky-item{position:sticky; top:80px; left:0; z-index:5;}
-.cpt-sidebar .layout-text{position:absolute; bottom:100%; left:0; z-index:5;}
-.cpt-sidebar .sidebar-menu > ul > li > a{height:50px; padding:0 20px; box-sizing:border-box;}
-.cpt-sidebar .sidebar-util{margin-top:10px;}
-.cpt-sidebar .sidebar-articles{margin-top:70px;}
-.cpt-sidebar .sidebar-articles .articles-list{margin-top:15px;}
-.cpt-sidebar .sidebar-articles .articles-list > ul{padding-left:12px; box-sizing:border-box;}
+.sidebar{position:relative; z-index:10;}
+.sidebar:before{display:block; content:''; clear:both; width:100%; height:38px; border-radius:6px; border-top:1px solid var(--border-default-light); border-right:1px solid var(--border-default-light); position: absolute; top:0; left:0; z-index:-1;}
+
+.sidebar .sticky-item{position:sticky; top:80px; left:0; z-index:5;}
+.sidebar .layout-text{position:absolute; bottom:100%; left:0; z-index:5;}
+.sidebar .sidebar-menu > ul > li > a{height:50px; padding:0 20px; box-sizing:border-box;}
+.sidebar .sidebar-util{margin-top:10px;}
+.sidebar .sidebar-articles{margin-top:70px;}
+.sidebar .sidebar-articles .articles-list{margin-top:15px;}
+.sidebar .sidebar-articles .articles-list > ul{padding-left:12px; box-sizing:border-box;}
+
+/* ==================================================
+    sidebar-controller
+================================================== */
+.sidebar-controller{padding:10px 10px 10px 0; display:grid; grid-template-columns: 1fr 1fr 1fr 40px 40px 40px; grid-template-rows: repeat(4, minmax(40px, auto)); gap:6px; border-bottom:1px solid var(--border-default-light); position:relative; z-index:10;}
+.sidebar-controller:before{display:block; content:''; clear:both; width:1px; height:100px; margin-top:-50px; background-color:var(--border-default-light); position:absolute; top:100%; right:0; z-index:5;}
+.sidebar-controller button:nth-child(1){grid-column:1/4; grid-row:1/5}
+.sidebar-controller button:nth-child(2){grid-column:4/5; grid-row:1/5}
+.sidebar-controller button:nth-child(3){grid-column:5/6; grid-row:1/4}
+.sidebar-controller button{width:100%; height:100%;}
+
+
+/* ==================================================
+    sidebar-depth
+================================================== */
+.sidebar-depth > ul > li > a{color: var(--color-default); font-weight:700; font-size:1.4rem;}
 
 /* ==================================================
     page-post
 ================================================== */
 .page-post{flex-grow:1; position:relative;}
-.page-post .layout-text{position:absolute; bottom:100%; right:0; z-index:5;}
+.page-post .layout-text{width:100%; position:absolute; bottom:100%; right:0; z-index:5;}
 .page-post .post-thumb{border-radius:8px; overflow:hidden; border:1px solid #ebebeb; background-size:cover; background-repeat:no-repeat; background-position:center; background-color:#c1c1c1;}
 .page-post .post-contents .title h3{font-size:4rem; font-weight:800; padding:20px 0 10px; border-bottom:1px solid var(--reverse-default-color)}
 .page-post .post-contents .contents{padding:40px 0;}
@@ -98,3 +116,4 @@ main .main-inner{padding:210px 0;}
 ================================================== */
 .bento-box{box-sizing:border-box; border-radius:8.5px; position:relative; z-index:5;} 
 .bento-pd{padding:16px 30px;}
+

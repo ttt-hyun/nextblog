@@ -16,6 +16,9 @@
     --util-color:#666666;
     --soft-text:#666666;
     --hover-soft-text:#1a1a1a;
+
+    --border-default-light:#ebebeb;
+    --color-default:#1a1a1a;
 }
 [data-theme="dark"]{
 
@@ -31,6 +34,9 @@
     --util-color:#ffffff;
     --prim-color:#e99b27;
     --hover-prim-color:#d98911;
+
+    --border-default-light:#ebebeb;
+    --color-default:#1a1a1a;
 }
 
 .wrapper{

@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import Image from "next/image";
 import Headings from "@/components/mdx/Headings";
 import { allDocs } from '@/../.contentlayer/generated';
+import Link from "next/link";
 
 // export const dynamic = 'force-static';
 
@@ -31,7 +32,20 @@ const singlePostPage = async ({ params: { slug } }) => {
     return (
         <>
         <div className="page-post">
-            <div className="layout-text flex-box justify-content-end align-items-center">
+            <div className="layout-text flex-box justify-content-between align-items-center">
+                <div className="referer-list">
+                    <ul className="flex-box">
+                        {/* <li>
+                            <Link href='/blog' className='fs16 fw800 default-clr'>Blog</Link>
+                        </li> */}
+                        <li>
+                            <Link href='/post' className='fs16 fw800 default-clr'>Post</Link>
+                        </li>
+                        <li>
+                            <Link href='javascript:;' className='fs16 fw800 default-clr'>{doc.title}</Link>
+                        </li>
+                    </ul>
+                </div>
                 <p className="date-text fs12 fw800">{date}</p>
             </div>
             <div className="post-thumb rd10">

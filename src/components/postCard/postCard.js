@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import styles from './postCard.module.css'
+import styles from './postCard.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 

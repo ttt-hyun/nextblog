@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main>
             <div className="main-inner">
-              <div className="align-items-stretch flex-box gap-20 max-grid ml-auto mr-auto">  
+              <div className="align-items-stretch flex-box gap-10 max-grid ml-auto mr-auto">  
                 <Sidebar/>
                 {children}
               </div>

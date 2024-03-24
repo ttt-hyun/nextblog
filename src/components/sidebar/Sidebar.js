@@ -1,118 +1,49 @@
-// 'use client'
-//import Bulbsvg from './bulbsvg';
 import Link from 'next/link';
 import Image from 'next/image';
-// import {gsap, tweenMax} from 'gsap';
-// import {ScrollTrigger} from 'gsap/ScrollTrigger';
-// import { useEffect, useRef } from 'react';
-// import { usePathname, useRouter } from 'next/navigation';
+import styles from './Sidebar.modal.css';
 
-
-// let animation;
 const Sidebar = () => {
-    // const sidebar = useRef();
-    // const pathname = usePathname();
-
-    // useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger);
-
-    //     console.log('랜더링...');
-    //     const el = sidebar.current;
-
-    //     if(animation) {
-    //         console.log('gsap kill');
-    //         // ScrollTrigger.getAll().forEach(trigger => {
-    //         //     trigger.kill();
-    //         // });
-    //         ScrollTrigger.getById('sidbar_animation').kill();
-    //         animation.kill();
-    //     }
-    //     console.log('animation 재할당')
-    //     animation = gsap.to(el, 
-    //         {
-    //             x:0,
-    //             y:0,
-    //             ease: 'linear',
-    //             scrollTrigger: {
-    //                 id: 'sidbar_animation',
-    //                 trigger: el,
-    //                 start: "top 10%",
-    //                 end: "bottom 50%",
-    //                 scrub: 1,
-    //                 duration: 3,
-    //                 pin: true,
-    //                 anticipatePin: 1,
-    //                 pinSpacing: false,
-    //                 markers: true,
-    //             }
-    //         }
-    //     );
-       
-    // }, [pathname])
-
     return (
-        <div className="cpt-sidebar flex-shrink">
-            <div className='sticky-item'>
-                <div className="layout-text flex-box align-items-center grow-1">
-                    <div className="referer-list">
-                        <ul className="flex-box">
-                            <li>
-                                <Link href='/blog' className='fs16 fw800 default-clr'>Blog</Link>
-                            </li>
-                            <li>
-                                <Link href='/blog/post' className='fs16 fw800 default-clr'>Post</Link>
-                            </li>
-                            <li>
-                                <Link href='/blog' className='fs16 fw800 default-clr'>React</Link>
-                            </li>
-                        </ul>
-                    </div>
+        <div className="sidebar flex-shrink">
+            <div className='sticky-item flex-box flex-column gap-20'>
+                <div className='sidebar-controller'>
+                    <button className="prim-btn prim-shadow flex-center"></button>
+                    <button className="prim-btn prim-shadow flex-center"></button>
+                    <button className="prim-btn prim-shadow flex-center"></button>
+                    <button className="prim-btn prim-shadow flex-center">
+                        <Image src="/dev/ico_share_gry.svg" alt="" width={20} height={22} />
+                    </button>
+                    <button className="prim-btn prim-shadow flex-center">
+                        <Image src="/dev/ico_chat_gry.svg" alt="" width={20} height={20} />
+                    </button>
+                    <button className="prim-btn prim-shadow flex-center">
+                        <Image src="/dev/ico_like_gry.svg" alt="" width={20} height={18} />
+                    </button>
+                    <button className="prim-btn prim-shadow flex-center"></button>
+                    <button className="prim-btn prim-shadow flex-center"></button>
                 </div>
-                <div className='sidebar-menu'>
-                    <ul className='flex-box flex-column gap-10'>
+                <div className='sidebar-depth'>
+                    <ul>
                         <li>
-                            <Link href="/post" className='flex-box align-items-center prim-bg hov rd10'>
-                                <span className='fs16 fw900 default-clr'>Post</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/lab" className='flex-box align-items-center prim-bg hov rd10'>
-                                <span className='fs16 fw900 default-clr'>Play lab</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/components" className='flex-box align-items-center prim-bg hov rd10'>
-                                <span className='fs16 fw900 default-clr'>Component's</span>
-                            </Link>
+                            <Link href="javascript:;">Programming Language</Link>
+                            <ul className="depth2">
+                                <li>
+                                    <Link href="javascript:;">SQL</Link>
+                                </li>
+                                <li>
+                                    <Link href="javascript:;">PHP</Link>
+                                </li>
+                                <li>
+                                    <Link href="javascript:;">HTML & CSS</Link>
+                                </li>
+                                <li>
+                                    <Link href="javascript:;">JavaScript</Link>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
-                <div className='sidebar-util'>
-                    <ul className='flex-box gap-10'>
-                        {/* <li>
-                            <button className="theme-btn prim-btn prim-shadow flex-center" onClick={() => handleChange()}>
-                                <div className='bright-effect'></div>
-                                <Bulbsvg /> 
-                            </button>
-                        </li> */}
-                        <li>
-                            <button className="prim-btn prim-shadow flex-center">
-                                <Image src="/dev/ico_share_gry.svg" alt="" width={20} height={22} />
-                            </button>
-                        </li>
-                        <li>
-                            <button className="prim-btn prim-shadow flex-center">
-                                <Image src="/dev/ico_chat_gry.svg" alt="" width={20} height={20} />
-                            </button>
-                        </li>
-                        <li>
-                            <button className="prim-btn prim-shadow flex-center">
-                                <Image src="/dev/ico_like_gry.svg" alt="" width={20} height={18} />
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-                <div className='sidebar-articles'>
+                {/* <div className='sidebar-articles'>
                     <div className='articles-head'>
                         <h4 className='fs24 fw900'>Related articles</h4>
                     </div>
@@ -132,7 +63,7 @@ const Sidebar = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
