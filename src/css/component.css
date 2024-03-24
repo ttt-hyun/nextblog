@@ -54,6 +54,8 @@ main .main-inner{padding:210px 0;}
     sidebar-depth
 ================================================== */
 .sidebar-depth > ul > li > a{color: var(--color-default); font-weight:700; font-size:1.4rem;}
+.sidebar-depth ul.depth2 > li > a{display:flex; align-items:center; justify-content:space-between;}
+.sidebar-depth ul.depth2 > li > a > span{color: var(--color-default); font-weight:700; font-size:1.4rem;}
 
 /* ==================================================
     page-post

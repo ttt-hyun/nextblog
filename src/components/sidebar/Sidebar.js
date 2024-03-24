@@ -28,16 +28,41 @@ const Sidebar = () => {
                             <Link href="javascript:;">Programming Language</Link>
                             <ul className="depth2">
                                 <li>
-                                    <Link href="javascript:;">SQL</Link>
+                                    <Link href="javascript:;">
+                                        <span>SQL</span>
+                                        <svg width="6" height="10" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.065 12L0 10.935L4.935 6L0 1.065L1.065 0L7.065 6L1.065 12Z" fill="#1a1a1a"/>
+                                        </svg>
+                                    </Link>
+                                    <ul className="depth3">
+                                        <li>
+                                            
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <Link href="javascript:;">PHP</Link>
+                                    <Link href="javascript:;">
+                                        <span>PHP</span>
+                                        <svg width="6" height="10" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.065 12L0 10.935L4.935 6L0 1.065L1.065 0L7.065 6L1.065 12Z" fill="#1a1a1a"/>
+                                        </svg>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="javascript:;">HTML & CSS</Link>
+                                    <Link href="javascript:;">
+                                        <span>HTML & CSS</span>
+                                        <svg width="6" height="10" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.065 12L0 10.935L4.935 6L0 1.065L1.065 0L7.065 6L1.065 12Z" fill="#1a1a1a"/>
+                                        </svg>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link href="javascript:;">JavaScript</Link>
+                                    <Link href="javascript:;">
+                                        <span>JavaScript</span>
+                                        <svg width="6" height="10" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.065 12L0 10.935L4.935 6L0 1.065L1.065 0L7.065 6L1.065 12Z" fill="#1a1a1a"/>
+                                        </svg>
+                                    </Link>
                                 </li>
                             </ul>
                         </li>
