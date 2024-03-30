@@ -19,7 +19,7 @@
 
     --border-default-light:#ebebeb;
     --color-default:#1a1a1a;
-    --color-default-soft:#1a1a1a;
+    --color-default-soft:#666666;
 }
 [data-theme="dark"]{
 

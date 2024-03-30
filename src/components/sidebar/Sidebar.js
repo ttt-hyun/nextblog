@@ -66,6 +66,58 @@ const Sidebar = () => {
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <Link href="javascript:;">Web Framework</Link>
+                            <ul className="depth2">
+                                <li>
+                                    <Link href="javascript:;">
+                                        <span>Next js</span>
+                                        <svg width="6" height="10" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.065 12L0 10.935L4.935 6L0 1.065L1.065 0L7.065 6L1.065 12Z" fill="#1a1a1a"/>
+                                        </svg>
+                                    </Link>
+                                    <ul className="depth3">
+                                        <li>
+                                            
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <Link href="javascript:;">
+                                        <span>CodeIgniter</span>
+                                        <svg width="6" height="10" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.065 12L0 10.935L4.935 6L0 1.065L1.065 0L7.065 6L1.065 12Z" fill="#1a1a1a"/>
+                                        </svg>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <Link href="javascript:;">Developer Type</Link>
+                            <ul className="depth2">
+                                <li>
+                                    <Link href="javascript:;">
+                                        <span>FrontEnd</span>
+                                        <svg width="6" height="10" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.065 12L0 10.935L4.935 6L0 1.065L1.065 0L7.065 6L1.065 12Z" fill="#1a1a1a"/>
+                                        </svg>
+                                    </Link>
+                                    <ul className="depth3">
+                                        <li>
+                                            
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <Link href="javascript:;">
+                                        <span>BackEnd</span>
+                                        <svg width="6" height="10" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.065 12L0 10.935L4.935 6L0 1.065L1.065 0L7.065 6L1.065 12Z" fill="#1a1a1a"/>
+                                        </svg>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 {/* <div className='sidebar-articles'>

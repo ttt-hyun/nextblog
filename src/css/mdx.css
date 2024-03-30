@@ -1,7 +1,8 @@
 .contents.markdown-body p{font-size:1.6rem;}
-.contents.markdown-body h1{font-size:3.6rem;}
-.contents.markdown-body h2{font-size:2.4rem;}
-.contents.markdown-body h3{font-size:2rem;}
+.contents.markdown-body h2{font-weight:800; font-size:3.4rem;}
+.contents.markdown-body h3{font-weight:800; margin:2.5rem 0 1.5rem; font-size:2.7rem;}
+.contents.markdown-body h4{font-weight:800; margin:1.5rem 0 .5rem; font-size:2.3rem;}
+.contents.markdown-body h5{font-weight:800; margin:1rem 0 .5rem; font-size:2rem;}
 .contents.markdown-body img{
   width:100%; 
   border-radius:8px; 
@@ -19,7 +20,7 @@ code:not([data-language]) {
 }
 
 figure[data-rehype-pretty-code-figure]{
-  margin:2rem 0; 
+  margin:0.5rem 0; 
   border:1px solid #ebebeb; 
   border-radius:8px; 
   overflow:hidden;
