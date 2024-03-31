@@ -1,3 +1,4 @@
+.contents.markdown-body {color:var(--color-default);}
 .contents.markdown-body p{font-size:1.6rem;}
 .contents.markdown-body h2{font-weight:800; font-size:3.4rem;}
 .contents.markdown-body h3{font-weight:800; margin:2.5rem 0 1.5rem; font-size:2.7rem;}
@@ -12,7 +13,7 @@
 
 code:not([data-language]) {
   font-family:ui-monospace, SFMono-Regular, SF Mono,Menlo, Consolas, Liberation Mono, monospace; 
-  background:#ebebeb;
+  background:var(--border-default-light);
   border:1px solid #cfcfcf;
   padding: 0px 5px; 
   border-radius:5px;

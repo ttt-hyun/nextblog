@@ -47,7 +47,6 @@ content.setSelectionRange(0, 0);
 ```
 [setSelectionRange 알아보기](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange)
 
-
 ##### 텍스트 조작이 필요할 경우
 
 ```js
@@ -63,7 +62,99 @@ document.body.removeChild($textarea);
 ### 🎲 Clipboard API
 Clipboard API는 https 또는 localhost 환경에서만 동작한다.
 
+현재(작성일 2024년 3월 14일)기준 무난하게 사용할 수 있는 방법이다.
+여기서 무난하게 사용가능하다고 말한건 ssl이 붙지 않은 프로토콜을 기준을 말한다.
+ssl이 붙지 않은 사이트의 경우 `Clipboard API`를 사용하고 싶어도 보안상의 이유로 사용이 어렵기 때문이다.
+[MDN 사이트](https://developer.mozilla.org/ko/docs/Web/API/Document/execCommand)를 가보면 
+대문작만하게 이 함수는 지원이 중단된 함수라는걸 알려주지만 아직까지 웹시장을 점유하고 있는 브라우저는 우리가 이미 사용하고 있던 브라우저들이 대부분 이기 때문이다.
+하지만 언젠가는 사용이 중단되어 호완성이 떨어지는 코드가 될 것이기 때문에 **ssl이 붙지 않을** 프로젝트를 작업하고 있다면 어쩔 수 없이 사용해야하지 않을까 싶다...
+
+#### 🎮 사용법
+
+```js
+var content = document.getElementById('textArea');
+
+// <input> 또는 <textarea>의 모든 텍스트를 선택하는 함수
+content.select();
+
+// copy : 복사, cut : 잘라내기, paste : 붙여넣기
+document.execCommand('copy');   
+```
+
+##### 사용시 주의사항
+* `select()`함수는 input이나 textarea태그 여야한다.
+*  type이 hidden이 아니여야한다.
+* 모바일  미작동 시 `setSelectionRange()`함수를 추가해야한다.
+
+<br/>
+```js title="execCommand.js" showLineNumbers
+var content = document.getElementById('textArea');
+content.select();
+content.setSelectionRange(0, 99999);
+document.execCommand('copy');   
+content.setSelectionRange(0, 0);
+```
+[setSelectionRange 알아보기](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange)
+
+##### 텍스트 조작이 필요할 경우
+
+```js
+const $textarea = document.createElement("textarea");
+document.body.appendChild($textarea);
+$textarea.value = '복사하고 싶은 텍스트 할당';
+$textarea.select();
+document.execCommand('copy');
+document.body.removeChild($textarea);
+```
+기존 텍스트 에 `+=` 가 필요할 경우 사용할 수 있는 코드다.
+
 ### 🎲 ClipBoard.js
+
+현재(작성일 2024년 3월 14일)기준 무난하게 사용할 수 있는 방법이다.
+여기서 무난하게 사용가능하다고 말한건 ssl이 붙지 않은 프로토콜을 기준을 말한다.
+ssl이 붙지 않은 사이트의 경우 `Clipboard API`를 사용하고 싶어도 보안상의 이유로 사용이 어렵기 때문이다.
+[MDN 사이트](https://developer.mozilla.org/ko/docs/Web/API/Document/execCommand)를 가보면 
+대문작만하게 이 함수는 지원이 중단된 함수라는걸 알려주지만 아직까지 웹시장을 점유하고 있는 브라우저는 우리가 이미 사용하고 있던 브라우저들이 대부분 이기 때문이다.
+하지만 언젠가는 사용이 중단되어 호완성이 떨어지는 코드가 될 것이기 때문에 **ssl이 붙지 않을** 프로젝트를 작업하고 있다면 어쩔 수 없이 사용해야하지 않을까 싶다...
+
+#### 🎮 사용법
+
+```js
+var content = document.getElementById('textArea');
+
+// <input> 또는 <textarea>의 모든 텍스트를 선택하는 함수
+content.select();
+
+// copy : 복사, cut : 잘라내기, paste : 붙여넣기
+document.execCommand('copy');   
+```
+
+##### 사용시 주의사항
+* `select()`함수는 input이나 textarea태그 여야한다.
+*  type이 hidden이 아니여야한다.
+* 모바일  미작동 시 `setSelectionRange()`함수를 추가해야한다.
+
+<br/>
+```js title="execCommand.js" showLineNumbers
+var content = document.getElementById('textArea');
+content.select();
+content.setSelectionRange(0, 99999);
+document.execCommand('copy');   
+content.setSelectionRange(0, 0);
+```
+[setSelectionRange 알아보기](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange)
+
+##### 텍스트 조작이 필요할 경우
+
+```js
+const $textarea = document.createElement("textarea");
+document.body.appendChild($textarea);
+$textarea.value = '복사하고 싶은 텍스트 할당';
+$textarea.select();
+document.execCommand('copy');
+document.body.removeChild($textarea);
+```
+기존 텍스트 에 `+=` 가 필요할 경우 사용할 수 있는 코드다.
 
 
 

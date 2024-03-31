@@ -12,6 +12,10 @@ import Sidebar from "@/components/sidebar/Sidebar";
 // };
 
 export default function RootLayout({ children }) {
+  if (typeof window !== 'undefined') {
+    const item = localStorage.getItem('theme');
+    console.log(item);
+  }
   return (
     <html>
       <body data-theme="light" suppressHydrationWarning={true}>
