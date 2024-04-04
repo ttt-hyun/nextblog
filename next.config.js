@@ -12,6 +12,7 @@ const nextConfig = {
   reactStrictMode: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
+    unoptimized: true,
     loader: 'akamai',
     path: 'https://ttt-hyun.github.io/dev',
 
