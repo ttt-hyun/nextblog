@@ -70,7 +70,17 @@ main .main-inner{padding:210px 0;}
 .page-post .layout-text{width:100%; position:absolute; bottom:100%; right:0; z-index:5;}
 .page-post .post-thumb{border-radius:8px; overflow:hidden; border:1px solid var(--border-default-light); background-size:cover; background-repeat:no-repeat; background-position:center; background-color:#c1c1c1;}
 .page-post .post-contents .title h3{font-size:4rem; font-weight:800; padding:20px 0 10px; border-bottom:1px solid var(--color-default); color:var(--color-default);}
-.page-post .post-contents .contents{padding:40px 0;}
+.page-post .post-contents .contents{padding:40px 0 140px;}
+
+/* ==================================================
+    post-comment
+================================================== */
+.page-post .post-comments .write-util .submit-btn{width:auto;}
+.page-post .post-comments .write-input{background-color:var(--bg-float-canvas); border-width:1px; border-style:solid; border-color:var(--border-default-light); border-radius:8px; position:relative; box-sizing:border-box;}
+.page-post .post-comments .write-input textarea{width:100%; min-height:120px; padding:10px 1.5rem; box-sizing:border-box;}
+.page-post .post-comments .write-input .user-info{border-top:1px solid var(--border-default-light); padding:5px 0;}
+.page-post .post-comments .write-input .user-info .ipt{width:50%;}
+.page-post .post-comments .write-input .user-info .ipt:first-child{border-right:1px solid var(--border-default-light)}
 
 /* ==================================================
     post-headings
@@ -144,5 +154,7 @@ main .main-inner{padding:210px 0;}
 .bulb-btn{position:relative;}
 .bulb-btn > svg .bulb-head{fill:var(--bg-bright-color);}
 [data-theme="dark"] .bulb-btn > .bright-effect{background:#fff; width:10px; height:10px; border-radius:5px; box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); margin-top:-4px;}
+
+
 
 

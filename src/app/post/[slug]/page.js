@@ -6,6 +6,7 @@ import Image from "next/image";
 import Headings from "@/components/mdx/Headings";
 import { allDocs } from '@/../.contentlayer/generated';
 import Link from "next/link";
+import Comment from '@/components/comment/Comment';
 
 // export const dynamic = 'force-static';
 
@@ -63,6 +64,9 @@ const singlePostPage = async ({ params: { slug } }) => {
                 <div className="contents markdown-body">
                     <Mdx code={doc.body.code} />
                 </div>
+            </div>
+            <div className="post-comments">
+                <Comment />
             </div>
         </div>
         <div className="post-heading">

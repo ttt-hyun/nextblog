@@ -119,6 +119,13 @@ button {
  cursor:pointer;
 }
 
+textarea {
+   resize:none;
+   outline:none;
+   border:none;
+   background: transparent;
+}
+
 a, a:link, a:visited, a:hover, a:active {
  /* color:inherit;  */
  text-decoration: none;
